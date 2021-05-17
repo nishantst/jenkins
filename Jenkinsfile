@@ -17,9 +17,9 @@ pipeline {
                               def mavenPom = readMavenPom file: 'pom.xml'
                               nexusArtifactUploader artifacts: [
 							         [
-									      artifactId: 'maven-war-plugin',
+									      artifactId: 'maven-deploy-plugin',
 										  classifier: '',
-										  file: "/var/lib/jenkins/workspace/nexus/target/maven-war-plugin-${mavenPom.version}.war",
+										  file: "/var/lib/jenkins/workspace/nexus/target/maven-deploy-plugin-${mavenPom.version}.war",
 										  type: 'war'
 								    ]
 							], 
