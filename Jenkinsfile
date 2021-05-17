@@ -17,7 +17,7 @@ pipeline {
                               def mavenPom = readMavenPom file: 'pom.xml'
                               nexusArtifactUploader artifacts: [
 							         [
-									      artifactId: 'samplesnap',
+									      artifactId: 'maven-snapshots',
 										  classifier: '',
 										  file: "/var/lib/jenkins/workspace/sampletest/target/samplesnap-${mavenPom.version}.war",
 										  type: 'war'
